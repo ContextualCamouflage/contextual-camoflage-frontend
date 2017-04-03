@@ -1,6 +1,34 @@
 {{!-- ember burger menu --}}
-{{!-- Heat Map --}}
-{{!-- user action to go to the form --}}
-{{#link-to 'disorder-input'}}
-  Join Our Community
-{{/link-to}}
+<div class="container-fluid">
+  <div class="home-header">
+    <div class="row">
+      <div class="col-xl-12">
+        <h1 class="header">CONTEXTUAL CAMOUFLAGE</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-12">
+        <h1 class="header"><span class="bold">MENTAL DISORDERS ARE MORE COMMON THAN YOU THINK</span></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-12">
+        <h1 class="header">VISIT <a class="bold" href="http://howareyoupgh.org">HOWAREYOUPGH.ORG</a> FOR MORE INFO</h1>
+      </div>
+    </div>
+  </div>
+  <div class="placeholder" style="height: 400px;"></div>
+  {{!-- Heat Map --}}
+  {{!-- user action to go to the form --}}
+  <div class="row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6" style="text-align: center;">
+      <h1>
+      {{#link-to 'disorder-input'}}
+      Join Our Community
+      {{/link-to}}
+    </h1>
+    </div>
+    <div class="col-xs-3"></div>
+  </div>
+</div>

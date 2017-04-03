@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Avenir Next Condensed';
+    src: url('../fonts/Avenir Next Condensed.ttc') format("ttc");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../fonts/Avenir Next.ttc') format("ttc");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/Avenir.ttc') format("ttc");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Light';
+  src: url('../fonts/AvenirLTStd-LightOblique-1.otf') format("otf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Avenir', sans-serif;
+  font-size: 16px;
+  background-color: #1a1a1a;
+}
+
+.ember-burger-menu .bm-outlet .bm-content {
+  background-color: transparent;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: #f8ffff;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+
+h1.header {
+  color: $text-color;
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 100;
+  font-size: 1.5em;
+  margin: 0;
+
+  .bold {
+    font-weight: 500;
+  }
+}
+
+.home-header {
+  text-align: center;
+}
+
+a {
+  color: $link-color;
+  transition: color .5s ease-in-out;
+  &:hover {
+    color: $link-color-hover;
+    transition: color .5s ease-in-out;
+    text-decoration: none;
+  }
+}

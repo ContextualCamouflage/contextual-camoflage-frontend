@@ -1,24 +1,27 @@
-<div class="container">
-  <div class="menu">
-    {{#link-to 'index'}}
-      <h1 class="left">
-        <em>ContextualCamouflage</em>
-      </h1>
-    {{/link-to}}
-    <div class="left links">
-      {{#link-to 'about'}}
-        About
-      {{/link-to}}
-      {{#link-to 'disorders'}}
-        Mental Illness Wiki
-      {{/link-to}}
-      {{#link-to 'testimonials'}}
-        The Community Says
-      {{/link-to}}
-    </div>
-  </div>
 
-  <div class="body">
-      {{outlet}}
+{{#burger-menu as |burger|}}
+  {{#burger.menu itemTagName="li" as |menu|}}
+    <button {{action burger.state.actions.close}}>Close</button>
+
+    <ul>
+      {{#menu.item}}
+        {{link-to 'Disorders' 'disorders'}}
+      {{/menu.item}}
+
+      {{#menu.item}}
+        {{link-to 'About' 'about'}}
+      {{/menu.item}}
+
+      {{#menu.item}}
+        {{link-to 'Testimonials' 'testimonials'}}
+      {{/menu.item}}
+    </ul>
+  {{/burger.menu}}
+
+  {{#burger.outlet}}
+    <button {{action burger.state.actions.toggle}}>Menu</button>
+    <div class="body">
+    {{outlet}}
   </div>
-</div>
+  {{/burger.outlet}}
+{{/burger-menu}}

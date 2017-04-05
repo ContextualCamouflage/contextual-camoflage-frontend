@@ -6,7 +6,7 @@ define('codefest/tests/adapters/application.jshint.lint-test', ['exports'], func
   QUnit.module('JSHint | adapters/application.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'adapters/application.js should pass jshint.\nadapters/application.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nadapters/application.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'adapters/application.js should pass jshint.');
   });
 });
 define('codefest/tests/app.jshint.lint-test', ['exports'], function (exports) {
@@ -15,7 +15,7 @@ define('codefest/tests/app.jshint.lint-test', ['exports'], function (exports) {
   QUnit.module('JSHint | app.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'app.js should pass jshint.\napp.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 4, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 6, col 1, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\napp.js: line 13, col 3, \'object short notation\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\napp.js: line 18, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n7 errors');
+    assert.ok(true, 'app.js should pass jshint.');
   });
 });
 define('codefest/tests/components/disorder-list.jshint.lint-test', ['exports'], function (exports) {
@@ -24,7 +24,16 @@ define('codefest/tests/components/disorder-list.jshint.lint-test', ['exports'], 
   QUnit.module('JSHint | components/disorder-list.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/disorder-list.js should pass jshint.\ncomponents/disorder-list.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/disorder-list.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/disorder-list.js should pass jshint.');
+  });
+});
+define('codefest/tests/controllers/disorders/index.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/disorders/index.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'controllers/disorders/index.js should pass jshint.');
   });
 });
 define('codefest/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
@@ -172,7 +181,7 @@ define('codefest/tests/models/disorder.jshint.lint-test', ['exports'], function 
   QUnit.module('JSHint | models/disorder.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'models/disorder.js should pass jshint.\nmodels/disorder.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/disorder.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'models/disorder.js should pass jshint.');
   });
 });
 define('codefest/tests/resolver.jshint.lint-test', ['exports'], function (exports) {
@@ -181,7 +190,7 @@ define('codefest/tests/resolver.jshint.lint-test', ['exports'], function (export
   QUnit.module('JSHint | resolver.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'resolver.js should pass jshint.\nresolver.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nresolver.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'resolver.js should pass jshint.');
   });
 });
 define('codefest/tests/router.jshint.lint-test', ['exports'], function (exports) {
@@ -190,7 +199,7 @@ define('codefest/tests/router.jshint.lint-test', ['exports'], function (exports)
   QUnit.module('JSHint | router.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'router.js should pass jshint.\nrouter.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nrouter.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nrouter.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nrouter.js: line 16, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n4 errors');
+    assert.ok(true, 'router.js should pass jshint.');
   });
 });
 define('codefest/tests/routes/about.jshint.lint-test', ['exports'], function (exports) {
@@ -199,7 +208,7 @@ define('codefest/tests/routes/about.jshint.lint-test', ['exports'], function (ex
   QUnit.module('JSHint | routes/about.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/about.js should pass jshint.\nroutes/about.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/about.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'routes/about.js should pass jshint.');
   });
 });
 define('codefest/tests/routes/disorder-input.jshint.lint-test', ['exports'], function (exports) {
@@ -208,7 +217,7 @@ define('codefest/tests/routes/disorder-input.jshint.lint-test', ['exports'], fun
   QUnit.module('JSHint | routes/disorder-input.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/disorder-input.js should pass jshint.\nroutes/disorder-input.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/disorder-input.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/disorder-input.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/disorder-input.js: line 5, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n4 errors');
+    assert.ok(true, 'routes/disorder-input.js should pass jshint.');
   });
 });
 define('codefest/tests/routes/disorders.jshint.lint-test', ['exports'], function (exports) {
@@ -217,7 +226,25 @@ define('codefest/tests/routes/disorders.jshint.lint-test', ['exports'], function
   QUnit.module('JSHint | routes/disorders.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/disorders.js should pass jshint.\nroutes/disorders.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/disorders.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/disorders.js: line 4, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n3 errors');
+    assert.ok(true, 'routes/disorders.js should pass jshint.');
+  });
+});
+define('codefest/tests/routes/disorders/index.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/disorders/index.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/disorders/index.js should pass jshint.');
+  });
+});
+define('codefest/tests/routes/disorders/show.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/disorders/show.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/disorders/show.js should pass jshint.');
   });
 });
 define('codefest/tests/routes/index.jshint.lint-test', ['exports'], function (exports) {
@@ -226,7 +253,7 @@ define('codefest/tests/routes/index.jshint.lint-test', ['exports'], function (ex
   QUnit.module('JSHint | routes/index.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/index.js should pass jshint.\nroutes/index.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/index.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/index.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/index.js: line 5, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n4 errors');
+    assert.ok(true, 'routes/index.js should pass jshint.');
   });
 });
 define('codefest/tests/routes/testimonials.jshint.lint-test', ['exports'], function (exports) {
@@ -235,7 +262,7 @@ define('codefest/tests/routes/testimonials.jshint.lint-test', ['exports'], funct
   QUnit.module('JSHint | routes/testimonials.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/testimonials.js should pass jshint.\nroutes/testimonials.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/testimonials.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'routes/testimonials.js should pass jshint.');
   });
 });
 define('codefest/tests/test-helper', ['exports', 'codefest/tests/helpers/resolver', 'ember-qunit'], function (exports, _codefestTestsHelpersResolver, _emberQunit) {
@@ -271,6 +298,28 @@ define('codefest/tests/unit/adapters/application-test.jshint.lint-test', ['expor
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/adapters/application-test.js should pass jshint.');
+  });
+});
+define('codefest/tests/unit/controllers/disorders/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:disorders/index', 'Unit | Controller | disorders/index', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('codefest/tests/unit/controllers/disorders/index-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/disorders/index-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/disorders/index-test.js should pass jshint.');
   });
 });
 define('codefest/tests/unit/controllers/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -400,6 +449,48 @@ define('codefest/tests/unit/routes/disorders-test.jshint.lint-test', ['exports']
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/disorders-test.js should pass jshint.');
+  });
+});
+define('codefest/tests/unit/routes/disorders/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:disorders/index', 'Unit | Route | disorders/index', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('codefest/tests/unit/routes/disorders/index-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/disorders/index-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/disorders/index-test.js should pass jshint.');
+  });
+});
+define('codefest/tests/unit/routes/disorders/show-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:disorders/show', 'Unit | Route | disorders/show', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('codefest/tests/unit/routes/disorders/show-test.jshint.lint-test', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/disorders/show-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/disorders/show-test.js should pass jshint.');
   });
 });
 define('codefest/tests/unit/routes/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {

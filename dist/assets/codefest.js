@@ -486,6 +486,9 @@ define('codefest/components/ember-wormhole', ['exports', 'ember-wormhole/compone
     }
   });
 });
+define('codefest/controllers/disorders/index', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Controller.extend({});
+});
 define('codefest/helpers/app-version', ['exports', 'ember', 'codefest/config/environment', 'ember-cli-app-version/utils/regexp'], function (exports, _ember, _codefestConfigEnvironment, _emberCliAppVersionUtilsRegexp) {
   exports.appVersion = appVersion;
   var version = _codefestConfigEnvironment['default'].APP.version;
@@ -769,61 +772,82 @@ define("codefest/instance-initializers/ember-data", ["exports", "ember-data/-pri
     initialize: _emberDataPrivateInstanceInitializersInitializeStoreService["default"]
   };
 });
-define('codefest/mirage/config', ['exports'], function (exports) {
-  exports['default'] = function () {
-    this.namespace = '/api';
-    this.get('/disorders', function () {
+define("codefest/mirage/config", ["exports"], function (exports) {
+  exports["default"] = function () {
+    this.namespace = "/api";
+    this.get("/disorders", function () {
       return {
         data: [{
-          type: 'disorders',
-          id: 'depression',
+          type: "disorders",
+          id: "depression",
           attributes: {
-            title: 'Depression'
+            title: "Depression",
+            summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est nisl, efficitur at odio id, tincidunt condimentum nulla. Praesent ac augue lobortis, feugiat dui ut, faucibus nulla. Nulla vel faucibus dolor, non vehicula ante. Donec vestibulum mollis turpis, at auctor velit iaculis ut. Cras vitae orci maximus, varius lorem quis, pharetra metus."
           }
         }, {
-          type: 'disorders',
-          id: 'anxiety',
+          type: "disorders",
+          id: "anxiety",
           attributes: {
-            title: 'Anxiety'
+            title: "Anxiety",
+            summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est nisl, efficitur at odio id, tincidunt condimentum nulla. Praesent ac augue lobortis, feugiat dui ut, faucibus nulla. Nulla vel faucibus dolor, non vehicula ante. Donec vestibulum mollis turpis, at auctor velit iaculis ut. Cras vitae orci maximus, varius lorem quis, pharetra metus."
           }
         }, {
-          type: 'disorders',
-          id: 'bipolar-disorder',
+          type: "disorders",
+          id: "bipolar-disorder",
           attributes: {
-            title: 'Bipolar Disorder'
+            title: "Bipolar Disorder",
+            summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est nisl, efficitur at odio id, tincidunt condimentum nulla. Praesent ac augue lobortis, feugiat dui ut, faucibus nulla. Nulla vel faucibus dolor, non vehicula ante. Donec vestibulum mollis turpis, at auctor velit iaculis ut. Cras vitae orci maximus, varius lorem quis, pharetra metus."
           }
         }, {
-          type: 'disorders',
-          id: 'dementia',
+          type: "disorders",
+          id: "dementia",
           attributes: {
-            title: 'Dimentia'
+            title: "Dimentia",
+            summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est nisl, efficitur at odio id, tincidunt condimentum nulla. Praesent ac augue lobortis, feugiat dui ut, faucibus nulla. Nulla vel faucibus dolor, non vehicula ante. Donec vestibulum mollis turpis, at auctor velit iaculis ut. Cras vitae orci maximus, varius lorem quis, pharetra metus."
           }
         }, {
-          type: 'disorders',
-          id: 'adhd',
+          type: "disorders",
+          id: "adhd",
           attributes: {
-            title: 'ADHD'
+            title: "ADHD",
+            summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est nisl, efficitur at odio id, tincidunt condimentum nulla. Praesent ac augue lobortis, feugiat dui ut, faucibus nulla. Nulla vel faucibus dolor, non vehicula ante. Donec vestibulum mollis turpis, at auctor velit iaculis ut. Cras vitae orci maximus, varius lorem quis, pharetra metus."
           }
         }, {
-          type: 'disorders',
-          id: 'schizophrenia',
+          type: "disorders",
+          id: "schizophrenia",
           attributes: {
-            title: 'Schizophrenia'
+            title: "Schizophrenia",
+            summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est nisl, efficitur at odio id, tincidunt condimentum nulla. Praesent ac augue lobortis, feugiat dui ut, faucibus nulla. Nulla vel faucibus dolor, non vehicula ante. Donec vestibulum mollis turpis, at auctor velit iaculis ut. Cras vitae orci maximus, varius lorem quis, pharetra metus."
           }
         }, {
-          type: 'disorders',
-          id: 'ocd',
+          type: "disorders",
+          id: "ocd",
           attributes: {
-            title: 'OCD'
+            title: "OCD",
+            summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est nisl, efficitur at odio id, tincidunt condimentum nulla. Praesent ac augue lobortis, feugiat dui ut, faucibus nulla. Nulla vel faucibus dolor, non vehicula ante. Donec vestibulum mollis turpis, at auctor velit iaculis ut. Cras vitae orci maximus, varius lorem quis, pharetra metus."
           }
         }, {
-          type: 'disorders',
-          id: 'autism ',
+          type: "disorders",
+          id: "autism",
           attributes: {
-            title: 'Autism'
+            title: "Autism",
+            summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est nisl, efficitur at odio id, tincidunt condimentum nulla. Praesent ac augue lobortis, feugiat dui ut, faucibus nulla. Nulla vel faucibus dolor, non vehicula ante. Donec vestibulum mollis turpis, at auctor velit iaculis ut. Cras vitae orci maximus, varius lorem quis, pharetra metus."
+          }
+        }, {
+          type: "disorders",
+          id: "ptsd",
+          attributes: {
+            title: "PTSD",
+            summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est nisl, efficitur at odio id, tincidunt condimentum nulla. Praesent ac augue lobortis, feugiat dui ut, faucibus nulla. Nulla vel faucibus dolor, non vehicula ante. Donec vestibulum mollis turpis, at auctor velit iaculis ut. Cras vitae orci maximus, varius lorem quis, pharetra metus."
           }
         }]
       };
+    });
+
+    this.get("/disorders/:id", function (db, request) {
+      return { data: disorders.find(function (disorder) {
+          return request.params.id === disorder.id;
+        }) };
     });
   };
 });
@@ -844,7 +868,8 @@ define('codefest/mirage/serializers/application', ['exports', 'ember-cli-mirage'
 });
 define('codefest/models/disorder', ['exports', 'ember-data'], function (exports, _emberData) {
   exports['default'] = _emberData['default'].Model.extend({
-    title: _emberData['default'].attr()
+    title: _emberData['default'].attr(),
+    summary: _emberData['default'].attr()
   });
 });
 define('codefest/resolver', ['exports', 'ember-resolver'], function (exports, _emberResolver) {
@@ -860,7 +885,9 @@ define('codefest/router', ['exports', 'ember', 'codefest/config/environment'], f
   Router.map(function () {
     this.route('about');
     this.route('testimonials');
-    this.route('disorders');
+    this.route('disorders', function () {
+      this.route('show', { path: '/:disorder_id' });
+    });
     this.route('disorder-input');
   });
 
@@ -879,9 +906,19 @@ define('codefest/routes/disorder-input', ['exports', 'ember', 'rsvp'], function 
   });
 });
 define('codefest/routes/disorders', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Route.extend({});
+});
+define('codefest/routes/disorders/index', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Route.extend({
     model: function model() {
       return this.get('store').findAll('disorder');
+    }
+  });
+});
+define('codefest/routes/disorders/show', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Route.extend({
+    model: function model(params) {
+      return this.get('store').findRecord('disorder', params.disorder_id);
     }
   });
 });
@@ -926,7 +963,13 @@ define("codefest/templates/disorder-input", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template({ "id": "Hlw50IW8", "block": "{\"statements\":[[\"block\",[\"bs-form\"],null,[[\"formLayout\",\"model\",\"action\"],[\"horizontal\",[\"get\",[null]],\"submit\"]],1]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"    \"],[\"open-element\",\"option\",[]],[\"dynamic-attr\",\"value\",[\"concat\",[[\"unknown\",[\"disorder\",\"id\"]]]]],[\"flush-element\"],[\"append\",[\"unknown\",[\"disorder\",\"title\"]],false],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[\"disorder\"]},{\"statements\":[[\"open-element\",\"select\",[]],[\"static-attr\",\"class\",\"disorder-select\"],[\"flush-element\"],[\"text\",\"\\n\"],[\"block\",[\"each\"],[[\"get\",[\"model\",\"disorders\"]]],null,0],[\"close-element\"],[\"text\",\"\\n\"],[\"open-element\",\"select\",[]],[\"static-attr\",\"class\",\"relationship-select\"],[\"flush-element\"],[\"text\",\"\\n  \"],[\"open-element\",\"option\",[]],[\"static-attr\",\"value\",\"me\"],[\"flush-element\"],[\"text\",\"Me\"],[\"close-element\"],[\"text\",\"\\n  \"],[\"open-element\",\"option\",[]],[\"static-attr\",\"value\",\"someone-else\"],[\"flush-element\"],[\"text\",\"Someone I Know\"],[\"close-element\"],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\"],[\"append\",[\"helper\",[\"input\"],null,[[\"type\",\"value\"],[\"submit\",\"Submit\"]]],false],[\"text\",\"\\n\"]],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "codefest/templates/disorder-input.hbs" } });
 });
 define("codefest/templates/disorders", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template({ "id": "iFGSWzT8", "block": "{\"statements\":[[\"block\",[\"each\"],[[\"get\",[\"model\"]]],null,0]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"  \"],[\"append\",[\"helper\",[\"disorder-list\"],null,[[\"disorder\"],[[\"get\",[\"disorder-item\"]]]]],false],[\"text\",\"\\n\"]],\"locals\":[\"disorder-item\"]}],\"hasPartials\":false}", "meta": { "moduleName": "codefest/templates/disorders.hbs" } });
+  exports["default"] = Ember.HTMLBars.template({ "id": "ZFoHEnux", "block": "{\"statements\":[[\"text\",\"\\n\"],[\"append\",[\"unknown\",[\"outlet\"]],false],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[],\"hasPartials\":false}", "meta": { "moduleName": "codefest/templates/disorders.hbs" } });
+});
+define("codefest/templates/disorders/index", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template({ "id": "SzBwekCd", "block": "{\"statements\":[[\"block\",[\"each\"],[[\"get\",[\"model\"]]],null,1]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"    \"],[\"append\",[\"unknown\",[\"disorder\",\"title\"]],false],[\"text\",\"\\n\"]],\"locals\":[]},{\"statements\":[[\"block\",[\"link-to\"],[\"disorders.show\",[\"get\",[\"disorder\"]]],null,0]],\"locals\":[\"disorder\"]}],\"hasPartials\":false}", "meta": { "moduleName": "codefest/templates/disorders/index.hbs" } });
+});
+define("codefest/templates/disorders/show", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template({ "id": "5uuq8qrX", "block": "{\"statements\":[[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"title\"],[\"flush-element\"],[\"text\",\"\\n  \"],[\"append\",[\"unknown\",[\"model\",\"title\"]],false],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"summary\"],[\"flush-element\"],[\"text\",\"\\n    \"],[\"append\",[\"unknown\",[\"model\",\"summary\"]],false],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[],\"hasPartials\":false}", "meta": { "moduleName": "codefest/templates/disorders/show.hbs" } });
 });
 define("codefest/templates/index", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template({ "id": "4teGrV6A", "block": "{\"statements\":[[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"container-fluid\"],[\"flush-element\"],[\"text\",\"\\n  \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"home-header\"],[\"flush-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"row\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-xl-12\"],[\"flush-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"h1\",[]],[\"static-attr\",\"class\",\"header\"],[\"flush-element\"],[\"text\",\"CONTEXTUAL CAMOUFLAGE\"],[\"close-element\"],[\"text\",\"\\n      \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"row\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-xl-12\"],[\"flush-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"h1\",[]],[\"static-attr\",\"class\",\"header\"],[\"flush-element\"],[\"open-element\",\"span\",[]],[\"static-attr\",\"class\",\"bold\"],[\"flush-element\"],[\"text\",\"MENTAL DISORDERS ARE MORE COMMON THAN YOU THINK\"],[\"close-element\"],[\"close-element\"],[\"text\",\"\\n      \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"row\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-xl-12\"],[\"flush-element\"],[\"text\",\"\\n        \"],[\"open-element\",\"h1\",[]],[\"static-attr\",\"class\",\"header\"],[\"flush-element\"],[\"text\",\"VISIT \"],[\"open-element\",\"a\",[]],[\"static-attr\",\"class\",\"bold\"],[\"static-attr\",\"href\",\"http://howareyoupgh.org\"],[\"flush-element\"],[\"text\",\"HOWAREYOUPGH.ORG\"],[\"close-element\"],[\"text\",\" FOR MORE INFO\"],[\"close-element\"],[\"text\",\"\\n      \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n  \"],[\"close-element\"],[\"text\",\"\\n  \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"placeholder\"],[\"static-attr\",\"style\",\"height: 400px;\"],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n\"],[\"text\",\"  \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"row\"],[\"flush-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-xs-3\"],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-xs-6\"],[\"static-attr\",\"style\",\"text-align: center;\"],[\"flush-element\"],[\"text\",\"\\n      \"],[\"open-element\",\"h1\",[]],[\"flush-element\"],[\"text\",\"\\n\"],[\"block\",[\"link-to\"],[\"disorder-input\"],null,0],[\"text\",\"    \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"close-element\"],[\"text\",\"\\n    \"],[\"open-element\",\"div\",[]],[\"static-attr\",\"class\",\"col-xs-3\"],[\"flush-element\"],[\"close-element\"],[\"text\",\"\\n  \"],[\"close-element\"],[\"text\",\"\\n\"],[\"close-element\"],[\"text\",\"\\n\"]],\"locals\":[],\"named\":[],\"yields\":[],\"blocks\":[{\"statements\":[[\"text\",\"      Join Our Community\\n\"]],\"locals\":[]}],\"hasPartials\":false}", "meta": { "moduleName": "codefest/templates/index.hbs" } });
@@ -938,21 +981,21 @@ define('codefest/tests/mirage/mirage/config.jshint.lint-test', ['exports'], func
   QUnit.module('JSHint | mirage/config.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'mirage/config.js should pass jshint.\nmirage/config.js: line 1, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n1 error');
+    assert.ok(false, 'mirage/config.js should pass jshint.\nmirage/config.js: line 81, col 20, \'disorders\' is not defined.\n\n1 error');
   });
 });
 define('codefest/tests/mirage/mirage/scenarios/default.jshint.lint-test', ['exports'], function (exports) {
   QUnit.module('JSHint | mirage/scenarios/default.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'mirage/scenarios/default.js should pass jshint.\nmirage/scenarios/default.js: line 1, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n1 error');
+    assert.ok(true, 'mirage/scenarios/default.js should pass jshint.');
   });
 });
 define('codefest/tests/mirage/mirage/serializers/application.jshint.lint-test', ['exports'], function (exports) {
   QUnit.module('JSHint | mirage/serializers/application.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'mirage/serializers/application.js should pass jshint.\nmirage/serializers/application.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmirage/serializers/application.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'mirage/serializers/application.js should pass jshint.');
   });
 });
 /* jshint ignore:start */
@@ -991,7 +1034,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("codefest/app")["default"].create({"name":"codefest","version":"0.0.0+3548aa14"});
+  require("codefest/app")["default"].create({"name":"codefest","version":"0.0.0+cb77b663"});
 }
 
 /* jshint ignore:end */

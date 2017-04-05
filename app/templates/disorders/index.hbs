@@ -1,0 +1,5 @@
+{{#each model as |disorder|}}
+  {{#link-to "disorders.show" disorder}}
+    {{disorder.title}}
+  {{/link-to}}
+{{/each}}

@@ -9,7 +9,9 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about');
   this.route('testimonials');
-  this.route('disorders');
+  this.route('disorders', function() {
+    this.route('show', { path: '/:disorder_id' });
+  });
   this.route('disorder-input');
 });
 

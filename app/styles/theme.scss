@@ -93,7 +93,7 @@ a {
   }
 }
 
-.story {
+.story, .anecdote, .research-info {
   margin-top: 3em;
 
   .form-group {
@@ -105,7 +105,7 @@ a {
       width: 100%;
       display: block;
       float: left;
-      margin: 1em;
+      margin: .5em;
       @media (min-width: 430px) {
         width: 25%;
       }

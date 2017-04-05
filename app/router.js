@@ -13,6 +13,11 @@ Router.map(function() {
     this.route('show', { path: '/:disorder_id' });
   });
   this.route('disorder-input');
+
+  // forms
+  this.route('tell-your-story');
+  this.route('personal-anecdote');
+  this.route('research-info');
 });
 
 export default Router;

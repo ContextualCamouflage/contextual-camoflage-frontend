@@ -33,6 +33,26 @@ body {
   background-color: transparent;
 }
 
+button, input, optgroup, select, textarea {
+  color: #000;
+}
+
+form {
+  button {
+    border: 1px solid $blue;
+    border-radius: 5px;
+    box-shadow: 2px 1px 1px $blue;
+    background-color: $light-blue;
+    color: #000;
+    padding: 1em;
+    margin-right: 1em;
+    &:hover {
+      background-color: darken($light-blue, 15%);
+      border: 1px solid darken($light-blue, 15%);
+    }
+  }
+}
+
 h1,h2,h3,h4,h5,h6 {
   color: #f8ffff;
 }
@@ -70,5 +90,36 @@ a {
     color: $link-color-hover;
     transition: color .5s ease-in-out;
     text-decoration: none;
+  }
+}
+
+.story {
+  margin-top: 3em;
+
+  .form-group {
+    clear: both;
+  }
+
+  .disorders {
+    .disorder-checkbox {
+      width: 100%;
+      display: block;
+      float: left;
+      margin: 1em;
+      @media (min-width: 430px) {
+        width: 25%;
+      }
+    }
+  }
+
+  .center-block {
+    width: 100%;
+    @media (min-width: 968px) {
+      width: 55%;
+    }
+  }
+
+  .actions {
+    text-align: center;
   }
 }

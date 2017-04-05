@@ -49,8 +49,10 @@
       <div class="center-block">
         <div class="form-group actions">
           <div><p>You can project now, or you can share a personal story or message about your condition.</p></div>
-          <button class="share btn btn-default">Share Something Personal</button>
-          <button class="finish btn btn-default">I'm finished, project now</button>
+            <button class="share btn btn-default">Share Something Personal</button>
+          {{#link-to 'index'}}
+            <button class="finish btn btn-default">I'm finished, project now</button>
+          {{/link-to}}
         </div>
       </div>
     </div>

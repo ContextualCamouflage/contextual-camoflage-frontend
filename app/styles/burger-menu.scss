@@ -1,0 +1,96 @@
+.ember-burger-menu {
+  .bm-menu {
+    background-color: darken(#286fb8, 20%);
+    ul {
+      margin-top: 2em;
+      li {
+        a {
+          display: block;
+          font-size: 1.1em;
+          padding: 1em;
+          border-top: .5px solid $text-color;
+          border-bottom: .5px solid $text-color;
+          transition: background-color .2s ease-in;
+          text-decoration: none;
+          &:hover {
+            color: $link-color;
+            text-decoration: none;
+            background-color: darken(#286fb8, 30%);
+            transition: background-color .2s ease-in;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    div {
+      float: right;
+      margin: 1em;
+      &:hover {
+        cursor: pointer;
+      }
+      .fa-times {
+        font-size: 2em;
+        color: $text-color;
+      }
+    }
+    .bm-menu-item {
+      clear: both;
+    }
+  }
+  .bm-outlet {
+    .bm-content {
+      div {
+        margin-left: 1em;
+        margin-top: 1em;
+        &:hover {
+          cursor: pointer;
+        }
+        .fa-bars, .fa-times {
+          font-size: 2em;
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  &.is-open {
+    .bm-menu {
+      background-color: darken(#286fb8, 20%);
+      ul {
+        margin-top: 2em;
+        li {
+          a {
+            display: block;
+            font-size: 1.1em;
+            padding: 1em;
+            border-top: .5px solid $text-color;
+            border-bottom: .5px solid $text-color;
+            transition: background-color .2s ease-in;
+            text-decoration: none;
+            &:hover {
+              color: $link-color;
+              text-decoration: none;
+              background-color: darken(#286fb8, 30%);
+              transition: background-color .2s ease-in;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      div {
+        float: right;
+        margin: 1em;
+        &:hover {
+          cursor: pointer;
+        }
+        .fa-times {
+          font-size: 2em;
+          color: $text-color;
+        }
+      }
+      .bm-menu-item {
+        clear: both;
+      }
+    }
+  }
+}

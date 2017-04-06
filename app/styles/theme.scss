@@ -83,7 +83,7 @@ h1.header {
   text-align: center;
 }
 
-a {
+a, a:visited, a:active {
   color: $link-color;
   transition: color .5s ease-in-out;
   &:hover {

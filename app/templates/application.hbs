@@ -1,4 +1,3 @@
-
 {{#burger-menu as |burger|}}
   {{#burger.menu itemTagName="li" as |menu|}}
     <button {{action burger.state.actions.close}}>Close</button>
@@ -19,6 +18,10 @@
   {{/burger.menu}}
 
   {{#burger.outlet}}
+  <div class="site-name-container">
+    <h1 class="site-name">McKoy Creative Home</h1>
+    {{#link-to 'index' class="logo" title="Click here to go back to the homepage"}}{{/link-to}}
+  </div>
     <button {{action burger.state.actions.toggle}}>Menu</button>
     <div class="body">
     {{liquid-outlet}}

@@ -1,9 +1,13 @@
 
-{{#burger-menu as |burger|}}
+{{#burger-menu animation="reveal" translucentOverlay="false" as |burger|}}
   {{#burger.menu itemTagName="li" as |menu|}}
-    <button {{action burger.state.actions.close}}>Close</button>
+    <div {{action burger.state.actions.close}}><i class="fa fa-times"></i></div>
 
     <ul>
+      {{#menu.item}}
+        {{link-to 'Home' 'index'}}
+      {{/menu.item}}
+
       {{#menu.item}}
         {{link-to 'Disorders' 'disorders'}}
       {{/menu.item}}
@@ -12,14 +16,11 @@
         {{link-to 'About' 'about'}}
       {{/menu.item}}
 
-      {{#menu.item}}
-        {{link-to 'Testimonials' 'testimonials'}}
-      {{/menu.item}}
     </ul>
   {{/burger.menu}}
 
   {{#burger.outlet}}
-    <button {{action burger.state.actions.toggle}}>Menu</button>
+    <div {{action burger.state.actions.toggle}}><i class="fa fa-bars"></i></div>
     <div class="body">
     {{liquid-outlet}}
   </div>

@@ -2,30 +2,31 @@
 <div class="container-fluid">
   <div class="home-header">
     <div class="row">
-      <div class="col-xl-12">
+      <div class="col-xs-12">
         <h1 class="header">CONTEXTUAL CAMOUFLAGE</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-xl-12">
+      <div class="col-xs-12">
         <h1 class="header"><span class="bold">MENTAL DISORDERS ARE MORE COMMON THAN YOU THINK</span></h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-xl-12">
+      <div class="col-xs-12">
         <h1 class="header">VISIT <a class="bold" href="http://mystory.cc">MYSTORY.CC</a> FOR MORE INFO</h1>
       </div>
     </div>
   </div>
-  <div class="container intro">
-    <div class="row">
-      <div class="col-xs-8">
+  <div class="container-fluid intro">
+    <div class="row map-key">
+      {{!-- heat map --}}
+      <div class="col-sm-5 col-sm-push-6 col-xs-12"><img class="map" src="/assets/images/mappng.png"/></div>
+      <div class="col-sm-6 col-sm-pull-5 col-xs-12">
         <div class="location"><h1>OAKLAND</h1></div>
         <div class="location-city"><h2>PITTSBURGH, PA</h2></div>
         <div class="time"><h2>{{moment-format (now) 'H:mm:s'}}</h2></div>
         <div class="date"><h2>{{moment-format (now) 'MM/DD/YYYY'}}</h2></div>
-      </div>
-      <div class="col-xs-8">
+        <div class="disorder-key">
         <h4>COMMON MENTAL DISORDERS</h4>
         <span class="disorder-icon depression">DEPRESSION</span>
         <span class="disorder-icon anxiety">ANXIETY</span>
@@ -37,10 +38,9 @@
         <span class="disorder-icon autism">AUTISM</span>
         <span class="disorder-icon ptsd">PTSD</span>
       </div>
+      </div>
     </div>
-  </div>
-  <div class="col-xs-4" style="height: 400px;"></div>
-  {{!-- Heat Map --}}
+    </div>
   <div class="row">
     <div class="col-xs-3"></div>
     <div class="col-xs-6" style="text-align: center;">

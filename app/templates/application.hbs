@@ -1,27 +1,30 @@
 {{#burger-menu animation="reveal" translucentOverlay="false" as |burger|}}
-  {{#burger.menu itemTagName="li" as |menu|}}
-    <div {{action burger.state.actions.close}}><i class="fa fa-times"></i></div>
+{{#burger.menu itemTagName="li" as |menu|}}
+<div class="icon" {{action burger.state.actions.close}}><i class="fa fa-times"></i></div>
 
-    <ul>
-      {{#menu.item}}
-        {{link-to 'Home' 'index'}}
-      {{/menu.item}}
+<ul>
+  {{#menu.item}}
+  {{link-to 'Home' 'index'}}
+  {{/menu.item}}
 
-      {{#menu.item}}
-        {{link-to 'Disorders' 'disorders'}}
-      {{/menu.item}}
+  {{#menu.item}}
+  {{link-to 'Disorders' 'disorders'}}
+  {{/menu.item}}
 
-      {{#menu.item}}
-        {{link-to 'About' 'about'}}
-      {{/menu.item}}
+  {{#menu.item}}
+  {{link-to 'About' 'about'}}
+  {{/menu.item}}
 
-    </ul>
-  {{/burger.menu}}
-
+</ul>
+{{/burger.menu}}
   {{#burger.outlet}}
-    <div {{action burger.state.actions.toggle}}><i class="fa fa-bars"></i></div>
-    <div class="body">
+  <div class="site-name-container">
+    <h1 class="site-name">McKoy Creative Home</h1>
+    {{#link-to 'index' class="logo" title="Click here to go back to the homepage"}}{{/link-to}}
+  </div>
+  <div class="icon" {{action burger.state.actions.toggle}}><i class="fa fa-bars"></i></div>
+  <div class="body">
     {{liquid-outlet}}
   </div>
   {{/burger.outlet}}
-{{/burger-menu}}
+  {{/burger-menu}}

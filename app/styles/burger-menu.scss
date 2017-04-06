@@ -39,12 +39,15 @@
   }
   .bm-outlet {
     .bm-content {
-      div {
+      div.icon {
+        height: 100px;
         margin-left: 1em;
         margin-top: 1em;
+        li {
         &:hover {
           cursor: pointer;
         }
+      }
         .fa-bars, .fa-times {
           font-size: 2em;
           color: $text-color;

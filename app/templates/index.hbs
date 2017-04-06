@@ -13,18 +13,39 @@
     </div>
     <div class="row">
       <div class="col-xl-12">
-        <h1 class="header">VISIT <a class="bold" href="http://howareyoupgh.org">HOWAREYOUPGH.ORG</a> FOR MORE INFO</h1>
+        <h1 class="header">VISIT <a class="bold" href="http://mystory.cc">MYSTORY.CC</a> FOR MORE INFO</h1>
       </div>
     </div>
   </div>
-  <div class="placeholder" style="height: 400px;"></div>
+  <div class="container intro">
+    <div class="row">
+      <div class="col-xs-8">
+        <div class="location"><h1>OAKLAND</h1></div>
+        <div class="location-city"><h2>PITTSBURGH, PA</h2></div>
+        <div class="time"><h2>{{moment-format (now) 'H:mm:s'}}</h2></div>
+        <div class="date"><h2>{{moment-format (now) 'MM/DD/YYYY'}}</h2></div>
+      </div>
+      <div class="col-xs-8">
+        <h4>COMMON MENTAL DISORDERS</h4>
+        <span class="disorder-icon depression">DEPRESSION</span>
+        <span class="disorder-icon anxiety">ANXIETY</span>
+        <span class="disorder-icon bipolar">BIPOLAR DISORDER</span>
+        <span class="disorder-icon dementia">DEMENTIA</span>
+        <span class="disorder-icon adhd">ADHD</span>
+        <span class="disorder-icon schizophrenia">SCHIZOPHRENIA</span>
+        <span class="disorder-icon ocd">OCD</span>
+        <span class="disorder-icon autism">AUTISM</span>
+        <span class="disorder-icon ptsd">PTSD</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-4" style="height: 400px;"></div>
   {{!-- Heat Map --}}
-  {{!-- user action to go to the form --}}
   <div class="row">
     <div class="col-xs-3"></div>
     <div class="col-xs-6" style="text-align: center;">
       <h1>
-      {{#link-to 'tell-your-story'}}
+      {{#link-to 'tell-your-story' class="btn btn-default story-link"}}
       Join Our Community
       {{/link-to}}
     </h1>

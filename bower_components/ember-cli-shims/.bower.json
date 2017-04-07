@@ -27,6 +27,6 @@
     "commit": "560a2aabdad4fda985e64dbfc089a2f26de5950f"
   },
   "_source": "https://github.com/ember-cli/ember-cli-shims.git",
-  "_target": "0.1.3",
+  "_target": "~0.1.1",
   "_originalSource": "ember-cli-shims"
 }

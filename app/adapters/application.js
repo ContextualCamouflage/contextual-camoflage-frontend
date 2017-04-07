@@ -1,7 +1,10 @@
 import DS from 'ember-data';
-import config from "../config/environment";
 
 export default DS.RESTAdapter.extend({
-  host: config.API_HOST,
-  namespace: "api/v1"
+  host: "https://con-camo-api.herokuapp.com",
+  namespace: "api/v1",
+  header: {
+    BASIC_AUTH_USER: 'contextual@camoflage.com',
+    BASIC_AUTH_PASSWORD: 'camocon2017!$'
+  }
 });

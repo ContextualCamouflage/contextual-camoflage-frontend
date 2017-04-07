@@ -20,6 +20,5 @@ export default Ember.Route.extend({
   },
 
   model(params) {
-    return Ember.$.getJSON('/api/v1/submissions', { city: params.city });
-  }
+    return Ember.$.getJSON('https://con-camo-api.herokuapp.com/api/v1/submissions', { city: params.city }); }
 });

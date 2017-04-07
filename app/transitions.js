@@ -25,4 +25,11 @@ export default function() {
     this.toRoute('index'),
     this.use('toDown')
   );
+
+  this.transition(
+    this.fromRoute('illnesses.index'),
+    this.toRoute('illnesses.show'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
 }

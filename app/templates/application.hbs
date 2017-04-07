@@ -1,5 +1,5 @@
 {{#burger-menu animation="reveal" translucentOverlay="false" as |burger|}}
-{{#burger.menu itemTagName="li" as |menu|}}
+{{#burger.menu itemTagName="li" dismissOnItemClick=true as |menu|}}
 <div class="icon" {{action burger.state.actions.close}}><i class="fa fa-times"></i></div>
 
 <ul>

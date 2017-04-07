@@ -27,55 +27,55 @@
             {{!-- Depression --}}
             {{#if showDepression}}
               {{#each (range depressionCount) as |num|}}
-                {{circle-marker-layer location=(random-loc center mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#03264c' fillOpacity=(random-dec 0.4 0.7) stroke=false}}
+                {{circle-marker-layer location=(random-loc lat lng mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#03264c' fillOpacity=(random-dec 0.7 0.9) stroke=false}}
               {{/each}}
             {{/if}}
             {{!-- Bipolar Disorder --}}
             {{#if showBipolar}}
               {{#each (range bipolarCount) as |num|}}
-                {{circle-marker-layer location=(random-loc center mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#64f566' fillOpacity=(random-dec 0.4 0.7) stroke=false}}
+                {{circle-marker-layer location=(random-loc lat lng mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#64f566' fillOpacity=(random-dec 0.4 0.8) stroke=false}}
               {{/each}}
             {{/if}}
             {{!-- ADHD --}}
             {{#if showAdhd}}
               {{#each (range ADHDCount) as |num|}}
-                {{circle-marker-layer location=(random-loc center mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#ff9900' fillOpacity=(random-dec 0.4 0.7) stroke=false}}
+                {{circle-marker-layer location=(random-loc lat lng mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#ff9900' fillOpacity=(random-dec 0.4 0.8) stroke=false}}
               {{/each}}
             {{/if}}
             {{!-- OCD --}}
             {{#if showOcd}}
               {{#each (range OCDCount) as |num|}}
-                {{circle-marker-layer location=(random-loc center mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#94261c' fillOpacity=(random-dec 0.4 0.7) stroke=false}}
+                {{circle-marker-layer location=(random-loc lat lng mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#94261c' fillOpacity=(random-dec 0.4 0.8) stroke=false}}
               {{/each}}
             {{/if}}
             {{!-- PTSD --}}
             {{#if showPtsd}}
               {{#each (range PTSDCount) as |num|}}
-                {{circle-marker-layer location=(random-loc center mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#159993' fillOpacity=(random-dec 0.4 0.7) stroke=false}}
+                {{circle-marker-layer location=(random-loc lat lng mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#159993' fillOpacity=(random-dec 0.4 0.8) stroke=false}}
               {{/each}}
             {{/if}}
             {{!-- Anxiety --}}
             {{#if showAnxiety}}
               {{#each (range anxietyCount) as |num|}}
-                {{circle-marker-layer location=(random-loc center mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#ffff00' fillOpacity=(random-dec 0.4 0.7) stroke=false}}
+                {{circle-marker-layer location=(random-loc lat lng mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#ffff00' fillOpacity=(random-dec 0.4 0.8) stroke=false}}
               {{/each}}
             {{/if}}
             {{!-- Dementia --}}
             {{#if showDementia}}
               {{#each (range dementiaCount) as |num|}}
-                {{circle-marker-layer location=(random-loc center mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#7f47dd' fillOpacity=(random-dec 0.4 0.7) stroke=false}}
+                {{circle-marker-layer location=(random-loc lat lng mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#7f47dd' fillOpacity=(random-dec 0.4 0.8) stroke=false}}
               {{/each}}
             {{/if}}
             {{!-- Schizophrenia --}}
             {{#if showSchizophrenia}}
               {{#each (range schizophreniaCount) as |num|}}
-                {{circle-marker-layer location=(random-loc center mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#8f2750' fillOpacity=(random-dec 0.4 0.7) stroke=false}}
+                {{circle-marker-layer location=(random-loc lat lng mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#8f2750' fillOpacity=(random-dec 0.6 0.9) stroke=false}}
               {{/each}}
             {{/if}}
             {{!-- Autism --}}
             {{#if showAutism}}
               {{#each (range autismCount) as |num|}}
-                {{circle-marker-layer location=(random-loc center mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#4a8bcb' fillOpacity=(random-dec 0.4 0.7) stroke=false}}
+                {{circle-marker-layer location=(random-loc center mapHeight mapWidth) radius=(random-int 2 5) fill=true fillColor='#4a8bcb' fillOpacity=(random-dec 0.6 0.9) stroke=false}}
               {{/each}}
             {{/if}}
         {{/leaflet-map}}

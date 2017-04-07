@@ -7,9 +7,14 @@ let randDec = (low, high) => {
   return Math.random() * (floatHigh - floatLow) + floatLow;
 };
 
-export function randomLoc([ center, height, width]/*, hash */) {
-  let randY = randDec(center[0] - height, center[0] + height);
-  let randX = randDec(center[1] - width, center[1] + width);
+export function randomLoc([ lat, lng, height, width]/*, hash */) {
+  let floatLat = parseFloat(lat);
+  let floatLng = parseFloat(lng);
+  let floatHeight = parseFloat(height);
+  let floatWidth = parseFloat(width);
+
+  let randY = randDec(floatLat - floatHeight, floatLat + floatHeight);
+  let randX = randDec(floatLng - floatWidth, floatLng + floatWidth);
 
   return [ randY, randX ];
 }

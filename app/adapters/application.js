@@ -1,6 +1,7 @@
 import DS from 'ember-data';
+import config from "../config/environment";
 
 export default DS.RESTAdapter.extend({
-  host: "https://con-camo-api.herokuapp.com",
+  host: config.API_HOST,
   namespace: "api/v1"
 });

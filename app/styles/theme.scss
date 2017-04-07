@@ -133,6 +133,10 @@ a, a:visited, a:active {
 
 }
 
+.location {
+  text-transform: uppercase;
+}
+
 .map  {
   height: 350px;
   @media (min-width: 850px) {
@@ -142,17 +146,33 @@ a, a:visited, a:active {
 .map-key {
   font-size: 0.5em;
   margin-top: 2em;
+
+  .leaflet-container {
+    height: 400px;
+    min-height: 400px;
+
+    .leaflet-control-attribution {
+      display: none;
+    }
+  }
+
   @media (min-width: 768px) {
     font-size: 1em;
   }
 }
 .disorder-key {
   .disorder-icon {
+    cursor: pointer;
     width: 100%;
     display: block;
     float: left;
     margin: .5em;
     white-space: nowrap;
+
+    &.disabled {
+      opacity: 0.5;
+    }
+
     @media (min-width: 430px) {
       width: 50%;
     }

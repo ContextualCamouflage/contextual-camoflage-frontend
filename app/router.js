@@ -14,6 +14,9 @@ Router.map(function() {
   this.route('tell-your-story');
   this.route('personal-anecdote');
   this.route('research-info');
+  this.route('illnesses', function() {
+    this.route('show', {path: '/:illness_id'});
+  });
 });
 
 export default Router;

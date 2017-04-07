@@ -1,0 +1,21 @@
+.personal-anecdote {
+  padding-bottom: 5em;
+  .anecdote {
+    margin-bottom: 0;
+    background-color: $blue;
+    padding: 3em 2em;
+    border-radius: 10px;
+    &:before {
+    	content: "";
+    	position: absolute;
+    	width: 0;
+    	height: 0;
+    	right: 40px;
+    	bottom: -51px;
+      border: 20px solid transparent;
+      border-top: 32px solid $blue; /* IE8 Fallback */
+      border-top: 32px solid $blue;
+      z-index: 2;
+    }
+  }
+}

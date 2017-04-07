@@ -15,6 +15,7 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "active-model-adapter": "2.1.1",
     "bootstrap-sass": "^3.3.7",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^2.4.1",
@@ -29,7 +30,6 @@
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-jshint": "^2.0.1",
     "ember-cli-meyer-reset-sass": "0.0.5",
-    "ember-cli-mirage": "0.3.1",
     "ember-cli-moment-shim": "3.1.0",
     "ember-cli-qunit": "^3.0.1",
     "ember-cli-release": "^0.2.9",

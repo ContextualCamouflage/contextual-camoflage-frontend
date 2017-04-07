@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 center-block">
+      <h1>Our Database</h1>
+      <h3>Browse each illness to get more information and find personal stories from people in your area.</h3>
+    </div>
+  </div>
+  <div class="row">
+    {{#each model as |illness|}}
+    <div class="col-xs-12 col-md-4">
+      {{#link-to 'illnesses.show' illness}}
+        <h2 class="illness-list">{{illness.name}}</h2>
+      {{/link-to}}
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+
+{{outlet}}

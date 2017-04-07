@@ -13,6 +13,9 @@ export default Ember.Route.extend({
     },
     zoom: {
       refreshModel: false
+    },
+    spread: {
+      refreshModel: true
     }
   },
 

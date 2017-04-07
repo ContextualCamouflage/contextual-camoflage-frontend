@@ -3,20 +3,22 @@ import Ember from 'ember';
 const { computed } = Ember;
 const { alias } = computed;
 
-const BOUNDS_LENGTH = .05;
-
 export default Ember.Controller.extend({
   queryParams: [
     'city',
     'lat',
     'lng',
-    'zoom'
+    'zoom',
+    'spread'
   ],
+
+  mapHeight: alias('spread'),
+  mapWidth: alias('spread'),
 
   center: computed('lat', 'lng', {
     get() {
       let { lat, lng } = this.getProperties('lat', 'lng');
-      return [ lat, lng ];
+      return [ parseFloat(lat), parseFloat(lng) ];
     }
   }),
 
@@ -44,12 +46,12 @@ export default Ember.Controller.extend({
 
   actions: {
     setBounds(e) {
-      let mapBounds = e.target.getBounds();
+      let map = e.target;
+      let mapBounds = map.getBounds();
       let southwest = mapBounds._southWest;
       let northeast = mapBounds._northEast;
       this.set('mapHeight', northeast.lat - southwest.lat);
       this.set('mapWidth', northeast.lng - southwest.lng);
-      this.set('renderPoints', true);
     }
   }
 });

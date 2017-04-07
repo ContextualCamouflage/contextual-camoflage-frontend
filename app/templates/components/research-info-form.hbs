@@ -1,7 +1,7 @@
 <form>
   <div class="container research-info">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-xs-12 col-md-6 col-md-offset-3">
         <h3>Help improve mental health research</h3>
         <div class="form-group">
           <label for="age">Age</label>
@@ -30,7 +30,9 @@
           <p>
             Thanks for your contributions! Click "Project My Story" below to share your experience with the community.
           </p>
-          <button class="btn btn-default" type="submit">Project My Story</button>
+          {{#link-to 'index'}}
+              <button class="btn btn-default" type="submit">Project My Story</button>
+          {{/link-to}}
         </div>
       </div>
     </div>

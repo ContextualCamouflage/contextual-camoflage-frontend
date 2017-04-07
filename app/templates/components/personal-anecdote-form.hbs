@@ -1,7 +1,7 @@
 <form>
   <div class="container anecdote">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-xs-12 col-md-6 col-md-offset-3">
         <h3>Share Something Personal</h3>
         <p>Thank you for choosing to share more of your story</p>
         <div class="form-group">
@@ -11,8 +11,12 @@
           <p>
             If you'd like, you can provide information about yourself that will help mental health researchers with their work.
           </p>
-          <button class='share btn btn-default'>Share With Researchers</button>
-          <button class='finish btn btn-default'>I'm finished, project now</button>
+          {{#link-to 'research-info'}}
+              <button class='share btn btn-default'>Share With Researchers</button>
+          {{/link-to}}
+          {{#link-to 'index'}}
+              <button class='finish btn btn-default' type="submit">I'm finished, project now</button>
+          {{/link-to}}
         </div>
       </div>
     </div>

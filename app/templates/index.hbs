@@ -81,8 +81,8 @@
         {{/leaflet-map}}
       </div>
       <div class="col-sm-6 col-sm-pull-5 col-xs-12">
-        <div class="location"><h1>{{city}}</h1></div>
-        <div class="location-city"><h2>PITTSBURGH, PA</h2></div>
+        {{!-- <div class="location"><h1>{{city}}</h1></div> --}}
+        <div class="location-city"><h2>{{city}}</h2></div>
         <div class="time"><h2>{{moment-format (now) 'HH:mm:ss'}}</h2></div>
         <div class="date"><h2>{{moment-format (now) 'MM/DD/YYYY'}}</h2></div>
         <div class="disorder-key">
